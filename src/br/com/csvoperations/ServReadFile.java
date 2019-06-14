@@ -83,16 +83,20 @@ public class ServReadFile {
 			
 			if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
 				sucesso = false;
+				System.out.println("Erro!");
 			} else {
 				sucesso = true;
 			}
 			
 			conn.disconnect();
 		} catch (MalformedURLException e) {
+			System.out.println(e.getMessage());
 			sucesso = false;
 		} catch (IOException e) {
+			System.out.println(e.getMessage());
 			sucesso = false;
 		} catch (RuntimeException e) {
+			System.out.println(e.getMessage());
 			sucesso = false;
 		}
 		

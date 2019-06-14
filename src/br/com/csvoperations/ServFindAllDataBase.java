@@ -54,6 +54,7 @@ public class ServFindAllDataBase {
 				return Response.status(500).build();
 			}
 		} catch(SQLException e) {
+			System.out.println(e.getMessage());
 			return Response.status(500).build();
 		}
 	}
