@@ -66,7 +66,6 @@ public class ServReadFile {
 	
 	private static boolean saveFile(School school) {
 		boolean sucesso;
-		System.out.println("Entrou aqui3!");
 		try {
 			URL url = new URL("http://localhost:8080/ProjectOperationsCSV/rest/database/");
 			
@@ -83,7 +82,6 @@ public class ServReadFile {
 			
 			if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
 				sucesso = false;
-				System.out.println("Erro!");
 			} else {
 				sucesso = true;
 			}
